@@ -31,7 +31,7 @@ DEPS		= $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.d))
 all		: $(NAME)
 
 $(NAME)	: ${OBJS}
-		$(CXX) -o $@ $^ $(LINKFLAGS)
+		$(CXX) $(LINKFLAGS) -o $@ $^
 
 ${OBJSDIR}/%.o	: %.cpp
 		@mkdir -p $(dir $@)
